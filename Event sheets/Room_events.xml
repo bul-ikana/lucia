@@ -76,5 +76,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="277384613626042">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="882005183497232" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="203676175973696" type="Darkness">
+                    <param id="0" name="Object">Lucia</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
