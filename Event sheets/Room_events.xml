@@ -2,5 +2,79 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Room_events</name>
-    <events />
+    <events>
+        <event-block sid="979148272120859">
+            <conditions>
+                <condition id="2" name="Key is down" sid="864021533555879" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="300876536330216" type="Lucia">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625143461959925">
+            <conditions>
+                <condition id="2" name="Key is down" sid="277787183196478" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="531432542973938" type="Lucia">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="384280866754604">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="459302080479175" type="System" />
+                <condition id="3" name="On key released" sid="761867583417022" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="3" name="On key released" sid="401210472333201" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="3" name="On key released" sid="283137528545417" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="3" name="On key released" sid="743526571856507" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="315124065795665" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="359957968749573" type="Lucia">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+                <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="122859798696687">
+            <conditions>
+                <condition id="2" name="Key is down" sid="909549376336552" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="298068399862887" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="608731737263299" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="201464666288473" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="924331459889839" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
