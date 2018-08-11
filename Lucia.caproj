@@ -61,7 +61,7 @@
             <texture />
             <tiles />
         </object-type>
-        <object-type name="Sprite" sid="178240631790453">
+        <object-type name="Lucia" sid="178240631790453">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="ScrollTo" sid="326277384262018">
@@ -78,11 +78,13 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="110" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549440952568408" speed="5">
+                <animation framecount="4" loop="1" name="HatWalk" pingpong="0" repeatcount="1" repeatto="0" sid="157781159310551" speed="4">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="12" loop="0" name="HatLight" pingpong="0" repeatcount="1" repeatto="0" sid="549440952568408" speed="4">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -95,14 +97,20 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="1" name="HatDie" pingpong="0" repeatcount="1" repeatto="0" sid="376666502280613" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="1" name="BaldWalk" pingpong="0" repeatcount="1" repeatto="0" sid="735407338176830" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="12" loop="1" name="BaldLight" pingpong="0" repeatcount="1" repeatto="0" sid="646949798505738" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -115,14 +123,20 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="1" name="BaldDie" pingpong="0" repeatcount="1" repeatto="0" sid="137533088413966" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="1" name="SemiHatWalk" pingpong="0" repeatcount="1" repeatto="0" sid="625514283230682" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="12" loop="1" name="SemiHatLight" pingpong="0" repeatcount="1" repeatto="0" sid="311932230168084" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -135,14 +149,20 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="1" name="SemiHatDie" pingpong="0" repeatcount="1" repeatto="0" sid="801928667953897" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="0" name="DarkBaldWalk" pingpong="0" repeatcount="1" repeatto="0" sid="892033484687258" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="12" loop="0" name="DarkBaldLight" pingpong="0" repeatcount="1" repeatto="0" sid="200215320980659" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -155,14 +175,20 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="0" name="DarkBaldDie" pingpong="0" repeatcount="1" repeatto="0" sid="656443996584944" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="0" name="DarkHatWalk" pingpong="0" repeatcount="1" repeatto="0" sid="137845822909941" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="12" loop="0" name="DarkHatLight" pingpong="0" repeatcount="1" repeatto="0" sid="422030466339390" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -175,16 +201,8 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="0" name="DarkHatDie" pingpong="0" repeatcount="1" repeatto="0" sid="836187089906493" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
