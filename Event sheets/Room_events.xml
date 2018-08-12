@@ -4,12 +4,13 @@
     <name>Room_events</name>
     <events>
         <comment>Movement</comment>
+        <variable comment="Can the player move?" constant="0" name="CanMove" sid="922380364320188" static="0" type="number">1</variable>
         <event-block sid="409898838850663">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="219525231850058" type="System">
-                    <param id="0" name="Variable">InDialogue</param>
+                    <param id="0" name="Variable">CanMove</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions />
@@ -128,37 +129,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block any="1" sid="384280866754604">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="761867583417022" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="401210472333201" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="283137528545417" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="3" name="On key released" sid="743526571856507" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="931789310157721" type="Function">
+                            <param id="0" name="Name">&quot;HatNeutral&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
-        <event-block any="1" sid="384280866754604">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="459302080479175" type="System" />
-                <condition id="3" name="On key released" sid="761867583417022" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-                <condition id="3" name="On key released" sid="401210472333201" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-                <condition id="3" name="On key released" sid="283137528545417" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-                <condition id="3" name="On key released" sid="743526571856507" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="315124065795665" type="Lucia">
-                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="359957968749573" type="Lucia">
-                    <param id="0" name="Frame number">4</param>
-                </action>
-                <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
-            </actions>
-        </event-block>
         <comment>Dialogue</comment>
-        <variable comment="Is a dialogue open?" constant="0" name="InDialogue" sid="922380364320188" static="0" type="number">0</variable>
         <event-block sid="724474921285319">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="514820072471697" type="Trigger">
@@ -185,6 +180,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="573165393663024" type="Function">
+                    <param id="0" name="Name">&quot;HatNeutral&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-15" name="Set visible" sid="542758069352597" type="Dialogue">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -192,8 +191,8 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="148147293408581" type="System">
-                    <param id="0" name="Variable">InDialogue</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="0" name="Variable">CanMove</param>
+                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="0" name="Set text" sid="152446743343531" type="BitPotion">
                     <param id="0" name="Text">Array.At(Function.Param(0))</param>
@@ -214,21 +213,17 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="243553853277906" type="System">
-                    <param id="0" name="Variable">InDialogue</param>
-                    <param id="1" name="Value">0</param>
+                    <param id="0" name="Variable">CanMove</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="325032703496704">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="832190837469350" type="System">
-                    <param id="0" name="Variable">InDialogue</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="398018752419258" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="398018752419258" type="Keyboard">
                     <param id="0" name="Key">13</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="832190837469350" type="Dialogue" />
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="105899273606944" type="Function">
@@ -385,6 +380,35 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Game Events</comment>
+        <event-block sid="414574882219260">
+            <conditions>
+                <condition id="0" name="On function" sid="128289635989226" type="Function">
+                    <param id="0" name="Name">&quot;HatNeutral&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="911881328659799" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="337863970234299" type="Lucia">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+                <action id="2" name="Stop" sid="153478315298056" type="Lucia" />
+            </actions>
+        </event-block>
+        <event-block sid="853337096359419">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="974714072663714" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="332591199443948" type="Function">
+                    <param id="0" name="Name">&quot;HatNeutral&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="499297924679216">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="587067941110256" type="Candle">
@@ -399,6 +423,24 @@
                 <action id="0" name="Call function" sid="535128706971491" type="Function">
                     <param id="0" name="Name">&quot;DialogueOn&quot;</param>
                     <param id="1" name="Parameter {n}">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="183031559239086">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="952920225868639" type="Crow">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="139190066854621" type="System">
+                    <param id="0" name="Variable">CanMove</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="892303605627598" type="Crow" />
+                <action id="4" name="Set animation" sid="677663976569008" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatDie&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
