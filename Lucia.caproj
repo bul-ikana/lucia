@@ -964,6 +964,38 @@
             <plugin id="Spritefont2" />
             <texture original-source="F:\Downloads\SpriteFont_BitPotionExt_Medium_(16)_[1,1,1,1]_10x14.png" />
         </object-type>
+        <object-type name="Candle" sid="755949721823636">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225776375582652" speed="3">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.25" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="1" />
+                            <point x="0.25" y="0.992188" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.25" y="0" />
+                            <point x="0.75" y="0" />
+                            <point x="0.75" y="1" />
+                            <point x="0.25" y="0.992188" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Crow" sid="693260188707246">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934515636791445" speed="1">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

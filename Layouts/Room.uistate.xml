@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>728.109</position-x>
-        <position-y>1436.53</position-y>
-        <position-z>56.8208</position-z>
-        <lookat-x>728.109</lookat-x>
-        <lookat-y>1436.53</lookat-y>
+        <position-x>982.999</position-x>
+        <position-y>1289.07</position-y>
+        <position-z>25.2387</position-z>
+        <lookat-x>982.999</lookat-x>
+        <lookat-y>1289.07</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
@@ -23,13 +23,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Player" />
+    <active-layer name="Triggers" />
     <layers>
         <layer locked="1" name="BG" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Walls" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Triggers" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Walls" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Player" parallax-in-editor="0" visible="1" />
         <layer locked="1" name="Darkness" parallax-in-editor="0" visible="0" />
-        <layer locked="0" name="Dialogue" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Dialogue" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

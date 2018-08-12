@@ -157,17 +157,6 @@
                 <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
             </actions>
         </event-block>
-        <event-block sid="277384613626042">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="882005183497232" type="System" />
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="203676175973696" type="Darkness">
-                    <param id="0" name="Object">Lucia</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
         <comment>Dialogue</comment>
         <variable comment="Is a dialogue open?" constant="0" name="InDialogue" sid="922380364320188" static="0" type="number">0</variable>
         <event-block sid="724474921285319">
@@ -277,6 +266,11 @@
                     <param id="0" name="Character">&quot;m&amp;@&quot;</param>
                     <param id="1" name="Width">8</param>
                 </action>
+                <action id="1" name="Set size" sid="988493813648792" type="Array">
+                    <param id="0" name="Width">100</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
                 <action id="2" name="Set at X" sid="249988971793837" type="Array">
                     <param id="0" name="X">0</param>
                     <param id="1" name="Value">&quot;Where am I?&quot;</param>
@@ -284,6 +278,127 @@
                 <action id="2" name="Set at X" sid="693150811427734" type="Array">
                     <param id="0" name="X">1</param>
                     <param id="1" name="Value">&quot;What is this place?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="748914741547363" type="Array">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">&quot;I need to get out of here.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="237863328146303" type="Array">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">&quot;It is too dark...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="217470949270375" type="Array">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Value">&quot;Is that a candle?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="339020363915154" type="Array">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Value">&quot;Great, I can see a bit farther.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="225683596417935" type="Array">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Value">&quot;Ugh. Dead end.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="895837335946749" type="Array">
+                    <param id="0" name="X">7</param>
+                    <param id="1" name="Value">&quot;I am a witch, I should be able to cast a light spell.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="992392969770294" type="Array">
+                    <param id="0" name="X">8</param>
+                    <param id="1" name="Value">&quot;It is a shame that I am such an incompetent witch...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="956503686215405" type="Array">
+                    <param id="0" name="X">9</param>
+                    <param id="1" name="Value">&quot;Sigh...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="275915941773629" type="Array">
+                    <param id="0" name="X">10</param>
+                    <param id="1" name="Value">&quot;Which way should I go?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="695005290293805" type="Array">
+                    <param id="0" name="X">11</param>
+                    <param id="1" name="Value">&quot;I am lost.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="329146774034024" type="Array">
+                    <param id="0" name="X">12</param>
+                    <param id="1" name="Value">&quot;Is this a house? a castle? a cave?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="641836159722090" type="Array">
+                    <param id="0" name="X">13</param>
+                    <param id="1" name="Value">&quot;How did I end up here?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="744818956369314" type="Array">
+                    <param id="0" name="X">14</param>
+                    <param id="1" name="Value">&quot;Am I still in the same room where I started?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="527769008178294" type="Array">
+                    <param id="0" name="X">15</param>
+                    <param id="1" name="Value">&quot;No doors yet, so I guess I am technically in the same room.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="156332341673263" type="Array">
+                    <param id="0" name="X">16</param>
+                    <param id="1" name="Value">&quot;If only...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="297220186177405" type="Array">
+                    <param id="0" name="X">17</param>
+                    <param id="1" name="Value">&quot;Someone was lazy with the textures here hehe.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="314718109835378" type="Array">
+                    <param id="0" name="X">18</param>
+                    <param id="1" name="Value">&quot;Lumos! Hehe, that did not work.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="628009333111559" type="Array">
+                    <param id="0" name="X">19</param>
+                    <param id="1" name="Value">&quot;How do you even cast a real light spell?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="621269638809509" type="Array">
+                    <param id="0" name="X">20</param>
+                    <param id="1" name="Value">&quot;I am such a failure...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="418339246886519" type="Array">
+                    <param id="0" name="X">21</param>
+                    <param id="1" name="Value">&quot;I miss my parents.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="929402014020663" type="Array">
+                    <param id="0" name="X">22</param>
+                    <param id="1" name="Value">&quot;This sure is a long corridor.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="349035102158783" type="Array">
+                    <param id="0" name="X">23</param>
+                    <param id="1" name="Value">&quot;I just wanna go home.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="699638860316545" type="Array">
+                    <param id="0" name="X">24</param>
+                    <param id="1" name="Value">&quot;What is that?&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Darkness</comment>
+        <event-block sid="277384613626042">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="882005183497232" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="203676175973696" type="Darkness">
+                    <param id="0" name="Object">Lucia</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="499297924679216">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="587067941110256" type="Candle">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="441705522188297" type="Darkness">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="737055387453770" type="Candle" />
+                <action id="0" name="Call function" sid="535128706971491" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOn&quot;</param>
+                    <param id="1" name="Parameter {n}">5</param>
                 </action>
             </actions>
         </event-block>
