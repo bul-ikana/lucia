@@ -3,30 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Room_events</name>
     <events>
-        <event-block sid="979148272120859">
-            <conditions>
-                <condition id="2" name="Key is down" sid="864021533555879" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="300876536330216" type="Lucia">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="625143461959925">
-            <conditions>
-                <condition id="2" name="Key is down" sid="277787183196478" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="531432542973938" type="Lucia">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <variable comment="Is a dialogue open?" constant="0" name="InDialogue" sid="922380364320188" static="0" type="number">0</variable>
         <event-block any="1" sid="384280866754604">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="459302080479175" type="System" />
@@ -54,27 +31,131 @@
                 <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
             </actions>
         </event-block>
-        <event-block any="1" sid="122859798696687">
+        <event-block sid="409898838850663">
             <conditions>
-                <condition id="2" name="Key is down" sid="909549376336552" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="298068399862887" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="608731737263299" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="201464666288473" type="Keyboard">
-                    <param id="0" name="Key">37</param>
+                <condition id="-14" name="Compare variable" sid="219525231850058" type="System">
+                    <param id="0" name="Variable">InDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="924331459889839" type="Lucia">
-                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="979148272120859">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="864021533555879" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="300876536330216" type="Lucia">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="625143461959925">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="277787183196478" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="531432542973938" type="Lucia">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="122859798696687">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="909549376336552" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="608731737263299" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="201464666288473" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="298068399862887" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="924331459889839" type="Lucia">
+                            <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="275578037169238">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="919864775388708" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="361243959755229" type="Lucia">
+                            <param id="0" name="Object">Walls</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="311295334748711" type="Lucia">
+                            <param id="0" name="Y">Lucia.Y- 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="470394762798739">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="359589196479598" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="398459786360414" type="Lucia">
+                            <param id="0" name="Object">Walls</param>
+                            <param id="1" name="Offset X">1</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="452095608117849" type="Lucia">
+                            <param id="0" name="X">Lucia.X + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="626682777397943">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="533519592338845" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="698566201853591" type="Lucia">
+                            <param id="0" name="Object">Walls</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="578573440073474" type="Lucia">
+                            <param id="0" name="Y">Lucia.Y + 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="937788931934434">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="387355852837551" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="268816329674490" type="Lucia">
+                            <param id="0" name="Object">Walls</param>
+                            <param id="1" name="Offset X">-1</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="138700752156273" type="Lucia">
+                            <param id="0" name="X">Lucia.X - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="277384613626042">
             <conditions>
@@ -84,6 +165,35 @@
                 <action id="-4" name="Set position to another object" sid="203676175973696" type="Darkness">
                     <param id="0" name="Object">Lucia</param>
                     <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="687917889584222">
+            <conditions>
+                <condition id="0" name="On function" sid="162597031976205" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="542758069352597" type="Dialogue">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="148147293408581" type="System">
+                    <param id="0" name="Variable">InDialogue</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724474921285319">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="514820072471697" type="Sprite">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="504454935728848" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
