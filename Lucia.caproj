@@ -10,9 +10,11 @@
     <unique-id>3qgawlw6mpjcd</unique-id>
     <saved-with-version>25900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
@@ -943,13 +945,24 @@
         <object-type name="Function" sid="271794018378830">
             <plugin id="Function" />
         </object-type>
-        <object-type name="Sprite" sid="118385109661374">
+        <object-type name="Trigger" sid="118385109661374">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Has the dialogue been acivated?" name="activated" sid="463781236267614" type="boolean" />
+                <instance-variable comment="The text it should show" name="text" sid="900999862666998" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="899485208086998" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="Array" sid="498177325761865">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="BitPotion" sid="942974600913624">
+            <plugin id="Spritefont2" />
+            <texture original-source="F:\Downloads\SpriteFont_BitPotionExt_Medium_(16)_[1,1,1,1]_10x14.png" />
         </object-type>
     </object-folder>
     <families />

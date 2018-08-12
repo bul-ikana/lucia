@@ -31,6 +31,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Lucia/" />
         <folder expanded="1" path="animation-folder/Darkness/" />
         <folder expanded="1" path="animation-folder/Dialogue/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Trigger/" />
     </folders-expanded>
 </c2uistate>

@@ -3,34 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Room_events</name>
     <events>
-        <variable comment="Is a dialogue open?" constant="0" name="InDialogue" sid="922380364320188" static="0" type="number">0</variable>
-        <event-block any="1" sid="384280866754604">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="459302080479175" type="System" />
-                <condition id="3" name="On key released" sid="761867583417022" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-                <condition id="3" name="On key released" sid="401210472333201" type="Keyboard">
-                    <param id="0" name="Key">39</param>
-                </condition>
-                <condition id="3" name="On key released" sid="283137528545417" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-                <condition id="3" name="On key released" sid="743526571856507" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="315124065795665" type="Lucia">
-                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="359957968749573" type="Lucia">
-                    <param id="0" name="Frame number">4</param>
-                </action>
-                <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
-            </actions>
-        </event-block>
+        <comment>Movement</comment>
         <event-block sid="409898838850663">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="219525231850058" type="System">
@@ -157,6 +130,33 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block any="1" sid="384280866754604">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="459302080479175" type="System" />
+                <condition id="3" name="On key released" sid="761867583417022" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+                <condition id="3" name="On key released" sid="401210472333201" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="3" name="On key released" sid="283137528545417" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+                <condition id="3" name="On key released" sid="743526571856507" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="315124065795665" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="359957968749573" type="Lucia">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+                <action id="2" name="Stop" sid="980139106485010" type="Lucia" />
+            </actions>
+        </event-block>
         <event-block sid="277384613626042">
             <conditions>
                 <condition id="-1" name="Every tick" sid="882005183497232" type="System" />
@@ -168,32 +168,122 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Dialogue</comment>
+        <variable comment="Is a dialogue open?" constant="0" name="InDialogue" sid="922380364320188" static="0" type="number">0</variable>
+        <event-block sid="724474921285319">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="514820072471697" type="Trigger">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="840917302567988" type="Trigger">
+                    <param id="0" name="Instance variable">activated</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="504454935728848" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOn&quot;</param>
+                    <param id="1" name="Parameter {n}">Trigger.text</param>
+                </action>
+                <action id="-14" name="Toggle boolean" sid="952492642479801" type="Trigger">
+                    <param id="0" name="Instance variable">activated</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="687917889584222">
             <conditions>
                 <condition id="0" name="On function" sid="162597031976205" type="Function">
-                    <param id="0" name="Name">&quot;Dialogue&quot;</param>
+                    <param id="0" name="Name">&quot;DialogueOn&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="542758069352597" type="Dialogue">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="385426013481351" type="BitPotion">
+                    <param id="0" name="Visibility">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="148147293408581" type="System">
                     <param id="0" name="Variable">InDialogue</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Set text" sid="152446743343531" type="BitPotion">
+                    <param id="0" name="Text">Array.At(Function.Param(0))</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="724474921285319">
+        <event-block sid="632053830824525">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="514820072471697" type="Sprite">
-                    <param id="0" name="Object">Lucia</param>
+                <condition id="0" name="On function" sid="572130423781873" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOff&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="504454935728848" type="Function">
-                    <param id="0" name="Name">&quot;Dialogue&quot;</param>
+                <action id="-15" name="Set visible" sid="996981828906632" type="Dialogue">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="718731310744440" type="BitPotion">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="243553853277906" type="System">
+                    <param id="0" name="Variable">InDialogue</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="325032703496704">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="832190837469350" type="System">
+                    <param id="0" name="Variable">InDialogue</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="398018752419258" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="105899273606944" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOff&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="553175506101627">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="488274597453291" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="562660478518338" type="BitPotion">
+                    <param id="0" name="Character">&quot;Ii.:!&quot;</param>
+                    <param id="1" name="Width">3</param>
+                </action>
+                <action id="5" name="Set character width" sid="952320401794605" type="BitPotion">
+                    <param id="0" name="Character">&quot; jl,()&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="914714765888517" type="BitPotion">
+                    <param id="0" name="Character">&quot;TYcfkx1 &quot;&quot;&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="798852853684233" type="BitPotion">
+                    <param id="0" name="Character">&quot;ABCDEFGHJKLNOPQRSUVXZabdeghopqrstuvyz023456789?-_$&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="358315269587810" type="BitPotion">
+                    <param id="0" name="Character">&quot;MWnw&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="763853880537243" type="BitPotion">
+                    <param id="0" name="Character">&quot;m&amp;@&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="2" name="Set at X" sid="249988971793837" type="Array">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;Where am I?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="693150811427734" type="Array">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">&quot;What is this place?&quot;</param>
                 </action>
             </actions>
         </event-block>
