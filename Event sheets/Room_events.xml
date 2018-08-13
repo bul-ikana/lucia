@@ -54,12 +54,39 @@
                             <param id="0" name="Key">39</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="924331459889839" type="Lucia">
-                            <param id="0" name="Animation">&quot;HatWalk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="287249895682509">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="431661034766483" type="Lucia">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="924331459889839" type="Lucia">
+                                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="533256031026150">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="832118019064367" type="Lucia">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="909078306751075" type="Lucia">
+                                    <param id="0" name="Animation">&quot;BaldWalk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="275578037169238">
                     <conditions>
@@ -184,6 +211,9 @@
                     <param id="0" name="Name">&quot;HatNeutral&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="0" name="Set text" sid="152446743343531" type="BitPotion">
+                    <param id="0" name="Text">Array.At(Function.Param(0))</param>
+                </action>
                 <action id="-15" name="Set visible" sid="542758069352597" type="Dialogue">
                     <param id="0" name="Visibility">1</param>
                 </action>
@@ -193,9 +223,6 @@
                 <action id="-9" name="Set value" sid="148147293408581" type="System">
                     <param id="0" name="Variable">CanMove</param>
                     <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set text" sid="152446743343531" type="BitPotion">
-                    <param id="0" name="Text">Array.At(Function.Param(0))</param>
                 </action>
             </actions>
         </event-block>
@@ -366,6 +393,94 @@
                     <param id="0" name="X">24</param>
                     <param id="1" name="Value">&quot;What is that?&quot;</param>
                 </action>
+                <action id="2" name="Set at X" sid="784744422132830" type="Array">
+                    <param id="0" name="X">33</param>
+                    <param id="1" name="Value">&quot;O lux magna nobis!&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="136821432870091" type="Array">
+                    <param id="0" name="X">34</param>
+                    <param id="1" name="Value">&quot;A light casting spell!&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="964563453019675" type="Array">
+                    <param id="0" name="X">35</param>
+                    <param id="1" name="Value">&quot;But how?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="919834979847050" type="Array">
+                    <param id="0" name="X">36</param>
+                    <param id="1" name="Value">&quot;I should read the whole page.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="610525396190733" type="Array">
+                    <param id="0" name="X">37</param>
+                    <param id="1" name="Value">&quot;Great light, come to us.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="234964534193811" type="Array">
+                    <param id="0" name="X">38</param>
+                    <param id="1" name="Value">&quot;For we offer you the sea, the earth and the wind.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="346676860858978" type="Array">
+                    <param id="0" name="X">39</param>
+                    <param id="1" name="Value">&quot;Ok.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="501985344916182" type="Array">
+                    <param id="0" name="X">40</param>
+                    <param id="1" name="Value">&quot;I guess...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="930869257304407" type="Array">
+                    <param id="0" name="X">41</param>
+                    <param id="1" name="Value">&quot;If I can find a bit of water.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="867231525421983" type="Array">
+                    <param id="0" name="X">42</param>
+                    <param id="1" name="Value">&quot;A bit of dirt, maybe a rock.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="322747822095412" type="Array">
+                    <param id="0" name="X">43</param>
+                    <param id="1" name="Value">&quot;And make some wind. Maybe blowing?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="386947784520085" type="Array">
+                    <param id="0" name="X">44</param>
+                    <param id="1" name="Value">&quot;I can sumon the great light, just like before.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="407118513264192" type="Array">
+                    <param id="0" name="X">45</param>
+                    <param id="1" name="Value">&quot;That way would be easier to get out of here.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="141457353056040" type="Array">
+                    <param id="0" name="X">46</param>
+                    <param id="1" name="Value">&quot;Sounds like a plan.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="115998629906452" type="Array">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Value">&quot;Huh?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="906572690452046" type="Array">
+                    <param id="0" name="X">25</param>
+                    <param id="1" name="Value">&quot;That crow took my hat!&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="290559429301356" type="Array">
+                    <param id="0" name="X">26</param>
+                    <param id="1" name="Value">&quot;I am bald.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="710774861765359" type="Array">
+                    <param id="0" name="X">27</param>
+                    <param id="1" name="Value">&quot;Very bald.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="584719346985804" type="Array">
+                    <param id="0" name="X">28</param>
+                    <param id="1" name="Value">&quot;I look like an ostrich.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="204301426740913" type="Array">
+                    <param id="0" name="X">29</param>
+                    <param id="1" name="Value">&quot;I need my hat, NOW.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="583798912858216" type="Array">
+                    <param id="0" name="X">30</param>
+                    <param id="1" name="Value">&quot;Stupid chemotherapy.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="593140912301352" type="Array">
+                    <param id="0" name="X">31</param>
+                    <param id="1" name="Value">&quot;I hope mom is ok...&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>Darkness</comment>
@@ -387,27 +502,39 @@
                     <param id="0" name="Name">&quot;HatNeutral&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="911881328659799" type="Lucia">
-                    <param id="0" name="Animation">&quot;HatWalk&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="337863970234299" type="Lucia">
-                    <param id="0" name="Frame number">4</param>
-                </action>
-                <action id="2" name="Stop" sid="153478315298056" type="Lucia" />
-            </actions>
-        </event-block>
-        <event-block sid="853337096359419">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="974714072663714" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="332591199443948" type="Function">
-                    <param id="0" name="Name">&quot;HatNeutral&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="610663134603958">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="502100183691180" type="Lucia">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="911881328659799" type="Lucia">
+                            <param id="0" name="Animation">&quot;HatNeutral&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="307072053966284">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="886075779792519" type="Lucia">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="931393679823754" type="Lucia">
+                            <param id="0" name="Animation">&quot;BaldNeutral&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="499297924679216">
             <conditions>
@@ -426,10 +553,20 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="183031559239086">
+        <event-block any="1" sid="183031559239086">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="952920225868639" type="Crow">
                     <param id="0" name="Object">Lucia</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="857671362697359" type="Crow">
+                    <param id="0" name="Object">Lucia</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">-10</param>
+                </condition>
+                <condition id="9" name="Is overlapping at offset" sid="387427325073946" type="Crow">
+                    <param id="0" name="Object">Lucia</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">10</param>
                 </condition>
             </conditions>
             <actions>
@@ -437,10 +574,73 @@
                     <param id="0" name="Variable">CanMove</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-10" name="Set value" sid="260444507167831" type="Lucia">
+                    <param id="0" name="Instance variable">Status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-9" name="Destroy" sid="892303605627598" type="Crow" />
                 <action id="4" name="Set animation" sid="677663976569008" type="Lucia">
-                    <param id="0" name="Animation">&quot;HatDie&quot;</param>
+                    <param id="0" name="Animation">&quot;LoseHat&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="850793334290326">
+            <conditions>
+                <condition id="4" name="On finished" sid="583133073745138" type="Lucia">
+                    <param id="0" name="Animation">&quot;LoseHat&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="910875892402237" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOn&quot;</param>
+                    <param id="1" name="Parameter {n}">25</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="766965880992772">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="158962388804759" type="Page">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="527267824538694" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatLight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="155854678302403" type="Page" />
+                <action id="-9" name="Set value" sid="238097464952147" type="System">
+                    <param id="0" name="Variable">CanMove</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="926377086466443">
+            <conditions>
+                <condition id="4" name="On finished" sid="784203739557912" type="Lucia">
+                    <param id="0" name="Animation">&quot;HatLight&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="665433914688566" type="Function">
+                    <param id="0" name="Name">&quot;DialogueOn&quot;</param>
+                    <param id="1" name="Parameter {n}">33</param>
+                </action>
+                <action id="5" name="Set frame" sid="531488703764704" type="Darkness">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="218465161277274">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="786811143514153" type="Next">
+                    <param id="0" name="Object">Lucia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="176551505692580" type="System">
+                    <param id="0" name="Layout">End</param>
                 </action>
             </actions>
         </event-block>
