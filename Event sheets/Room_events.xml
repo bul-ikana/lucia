@@ -481,6 +481,14 @@
                     <param id="0" name="X">31</param>
                     <param id="1" name="Value">&quot;I hope mom is ok...&quot;</param>
                 </action>
+                <action id="2" name="Set at X" sid="100895620110408" type="Array">
+                    <param id="0" name="X">47</param>
+                    <param id="1" name="Value">&quot;I am SO tired of dead ends. Ugh.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="351045349794054" type="Array">
+                    <param id="0" name="X">48</param>
+                    <param id="1" name="Value">&quot;I just want to cry...&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>Darkness</comment>
